@@ -1,15 +1,15 @@
-#include"Guass.h"
+ï»¿#include"Guass.h"
 #include<cmath>
 #include <iomanip>
 #include<iostream>
 
 Guass::Guass(){
 
-	cout<<"ÇëÊäÈë¾ØÕóÎ¬Êý£º"<<endl;
+	cout<<"è¯·è¾“å…¥çŸ©é˜µç»´æ•°ï¼š"<<endl;
 	cin>> row;
 	cout<<endl;
 
-	cout<<"ÇëÊäÈëeps£º"<<endl;
+	cout<<"è¯·è¾“å…¥epsï¼š"<<endl;
 	cin>>eps;
 	cout<<endl;
 
@@ -19,7 +19,7 @@ Guass::Guass(){
 	for (int i = 0; i < row; i++)
 		Array[i] = new double [ row + 1 ];
 	
-	cout<<"ÇëÊäÈë¾ØÕó£º"<<endl;
+	cout<<"è¯·è¾“å…¥çŸ©é˜µï¼š"<<endl;
 
 	for (int i = 0; i < row; i++)
 		for (int j = 0; j <  row + 1 ; j++)
@@ -76,12 +76,12 @@ bool Guass::Elimination(){
 		if(!SelctMaj(step))
 			return false;
 
-		for (int i = step; i < row; i++){                                       //µÚk²½ÏûÔª£¬ÐèÒª´ÓµÚkÐÐ¼ÆËãµ½×îºóÒ»ÐÐ
+		for (int i = step; i < row; i++){                                       //ç¬¬kæ­¥æ¶ˆå…ƒï¼Œéœ€è¦ä»Žç¬¬kè¡Œè®¡ç®—åˆ°æœ€åŽä¸€è¡Œ
 
 			if(Array[step - 1][step - 1] == 0)
 				return false;
 
-			double m = Array[i][step - 1] / Array[step - 1][step - 1];          //mÎªÃ¿ÐÐÓëÖ÷ÐÐµÚÒ»¸ö·Ç0ÔªËØµÄ±¶Êý
+			double m = Array[i][step - 1] / Array[step - 1][step - 1];          //mä¸ºæ¯è¡Œä¸Žä¸»è¡Œç¬¬ä¸€ä¸ªéž0å…ƒç´ çš„å€æ•°
 			for (int j = step - 1; j < row + 1; j++){
 				Array[i][j] -=  Array[step - 1][j] * m;
 			}
@@ -122,27 +122,27 @@ bool Guass::ShowX(){
 
 bool Guass::Start(){
 
-	cout<<"³õÊ¼¾ØÕó£º"<<endl<<endl;
+	cout<<"åˆå§‹çŸ©é˜µï¼š"<<endl<<endl;
 	Show();
 
-	cout<<"¿ªÊ¼ÏûÔª..."<<endl<<endl;
+	cout<<"å¼€å§‹æ¶ˆå…ƒ..."<<endl<<endl;
 
 	if(!Elimination()){
-		cout<<"ÎÞ½â£¡"<<endl<<endl;
+		cout<<"æ— è§£ï¼"<<endl<<endl;
 		return false;
 	}
 
-	cout<<"ÏûÔªÖ®ºóµÄ¾ØÕó£º"<<endl<<endl;
+	cout<<"æ¶ˆå…ƒä¹‹åŽçš„çŸ©é˜µï¼š"<<endl<<endl;
 	Show();
 
-	cout<<"¿ªÊ¼»Ø´úÇó½â..."<<endl<<endl;
+	cout<<"å¼€å§‹å›žä»£æ±‚è§£..."<<endl<<endl;
 
 	if(!Compute()){
-		cout<<"ÎÞ½â£¡"<<endl<<endl;
+		cout<<"æ— è§£ï¼"<<endl<<endl;
 		return false;
 	}
 
-	cout<<"¼ÆËã½á¹û£º"<<endl<<endl;
+	cout<<"è®¡ç®—ç»“æžœï¼š"<<endl<<endl;
 	ShowX();
 
 	cout<<endl<<endl;

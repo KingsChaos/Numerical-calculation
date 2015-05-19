@@ -1,4 +1,4 @@
-#ifndef GUASS_H
+ï»¿#ifndef GUASS_H
 #define GUASS_H
 
 #include<iostream>
@@ -10,19 +10,19 @@ class Guass{
 public:
 	Guass();
 	~Guass();
-	bool SelctMaj(int k);                     //Ñ¡È¡µÚk²½µÄÖ÷Ôª
-	bool Exchange(int i, int j);              //½»»»µÚiĞĞºÍµÚjĞĞ
-	bool Elimination();                       //ÏûÔª
-	bool Compute();                           //Çó½â
-	bool Show();                              //ÏÔÊ¾¾ØÕó
-	bool ShowX();                             //ÏÔÊ¾½á¹û
+	bool SelctMaj(int k);                     //é€‰å–ç¬¬kæ­¥çš„ä¸»å…ƒ
+	bool Exchange(int i, int j);              //äº¤æ¢ç¬¬iè¡Œå’Œç¬¬jè¡Œ
+	bool Elimination();                       //æ¶ˆå…ƒ
+	bool Compute();                           //æ±‚è§£
+	bool Show();                              //æ˜¾ç¤ºçŸ©é˜µ
+	bool ShowX();                             //æ˜¾ç¤ºç»“æœ
 	bool Start();
 
 private:
 	double eps;
-	double **Array;                           //¾ØÕó
-	double *X;                                //½á¹û
-	int row;								  //Êı×éµÄĞĞ£¬column = row + 1
+	double **Array;                           //çŸ©é˜µ
+	double *X;                                //ç»“æœ
+	int row;								  //æ•°ç»„çš„è¡Œï¼Œcolumn = row + 1
 };
 
 
