@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<math.h>
 
 using namespace std;
@@ -9,17 +9,17 @@ int main(){
 
 	double a,b,eps,h;
 	double T_2n, T_n;            
-	cout<<"ÇëÊäÈëÉÏ½çºÍÏÂ½ç£º";
+	cout<<"è¯·è¾“å…¥ä¸Šç•Œå’Œä¸‹ç•Œï¼š";
 	cin>>a>>b;
-	cout<<"ÇëÊäÈëÎó²î£º";
+	cout<<"è¯·è¾“å…¥è¯¯å·®ï¼š";
 	cin>>eps;
 
-	T_n = (b - a)/2 * (f(a) + f(b));                         //ÏÈ¼ÆËãh=b-aÊ±µÄT1
+	T_n = (b - a)/2 * (f(a) + f(b));                         //å…ˆè®¡ç®—h=b-aæ—¶çš„T1
 
-	int n = 2;                                               //×ÓÇø¼ä¸öÊı
+	int n = 2;                                               //å­åŒºé—´ä¸ªæ•°
 	while(1){                 
 
-		h = (b - a) / n;                                     //¼ÆËã²½³¤
+		h = (b - a) / n;                                     //è®¡ç®—æ­¥é•¿
 
 		double S = 0;
 		for (double x = a + h; x < b;){
@@ -30,7 +30,7 @@ int main(){
 		T_2n = T_n / 2 + S * h / 2;                         
 
 		double e = fabs((T_2n - T_n));
-		if(e > eps)                                         //µ±Îó²î´óÓÚÎó²îÏŞÊ±£¬¼ÌĞøÖ´ĞĞÑ­»·
+		if(e > eps)                                         //å½“è¯¯å·®å¤§äºè¯¯å·®é™æ—¶ï¼Œç»§ç»­æ‰§è¡Œå¾ªç¯
 			T_n = T_2n;
 		else
 			break;
@@ -39,7 +39,7 @@ int main(){
 		n *= 2; 
 	}
 
-	cout<<"»ı·Ö½üËÆÖµ£º"<<T_2n<<endl<<endl;
+	cout<<"ç§¯åˆ†è¿‘ä¼¼å€¼ï¼š"<<T_2n<<endl<<endl;
 
 	system("pause");
 	return 0;

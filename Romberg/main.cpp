@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<math.h>
 #include<vector>
 #include<iomanip>
@@ -10,9 +10,9 @@ double f(double x);
 int main(){
 
 	double a, b, eps;
-	cout<<"ÇëÊäÈëÉÏ½çºÍÏÂ½ç£º";
+	cout<<"è¯·è¾“å…¥ä¸Šç•Œå’Œä¸‹ç•Œï¼š";
 	cin>>a>>b;
-	cout<<"ÇëÊäÈëÎó²îÏŞ£º";
+	cout<<"è¯·è¾“å…¥è¯¯å·®é™ï¼š";
 	cin>>eps;
 
 	vector<double> T[7];
@@ -21,9 +21,9 @@ int main(){
 	t = (b - a)/2 * (f(a) + f(b));
 	T[0].push_back(t);
 
-	double step = 2;                                     //ÇóT0Ê±µÄ×ÓÇø¼ä¸öÊı
+	double step = 2;                                     //æ±‚T0æ—¶çš„å­åŒºé—´ä¸ªæ•°
 	for (int j = 1; j < 7; j++){
-		double h = (b - a)/step;                      //²½³¤
+		double h = (b - a)/step;                      //æ­¥é•¿
 		double S = 0.0;
 		for (double x = a + h; x < b;){
 			S += 2 * f(x);
@@ -51,7 +51,7 @@ int main(){
 			break;
 	}
 
-	cout<<endl<<"T-Êı±íÈçÏÂ£º"<<endl;
+	cout<<endl<<"T-æ•°è¡¨å¦‚ä¸‹ï¼š"<<endl;
 	for (int i = 0; i <= m; i++){
 		for (int j = 0; j <= i; j++){
 			cout << setprecision(8);
@@ -61,7 +61,7 @@ int main(){
 	}
 
 	cout << setprecision(8);
-	cout<<endl<<"»ı·Ö½üËÆÖµÎª£º"<<T[m][m]<<endl<<endl;
+	cout<<endl<<"ç§¯åˆ†è¿‘ä¼¼å€¼ä¸ºï¼š"<<T[m][m]<<endl<<endl;
 
 	system("pause");
 	return 0;
